@@ -1,0 +1,3375 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/food_ontology.owl"
+         xmlns="http://example.org/food_ontology.owl#">
+
+<owl:Ontology rdf:about="http://example.org/food_ontology.owl"/>
+
+<owl:DatatypeProperty rdf:about="#has_pref_label">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_alt_labels">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_scientific_name">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_tags">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_food_code">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_food_group">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#FoodIngredients">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PlantOrigin">
+  <rdfs:subClassOf rdf:resource="#FoodIngredients"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PrimaryFoodCommodityFromPlantOrigin">
+  <rdfs:subClassOf rdf:resource="#PlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fruit">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Vegetables">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CucumbersGourdsAndSquashes">
+  <rdfs:subClassOf rdf:resource="#Vegetables"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LeafySaladAndSeaVegetables">
+  <rdfs:subClassOf rdf:resource="#Vegetables"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EdibleFlowers">
+  <rdfs:subClassOf rdf:resource="#Vegetables"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BulbAndStemVegetables">
+  <rdfs:subClassOf rdf:resource="#Vegetables"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RootAndTuberousVegetables">
+  <rdfs:subClassOf rdf:resource="#Vegetables"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ChilliesAndCapsicums">
+  <rdfs:subClassOf rdf:resource="#Vegetables"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MiscellaneousVegetables">
+  <rdfs:subClassOf rdf:resource="#Vegetables"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HerbsAndSpices">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NutsAndSeeds">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cereals">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PulsesAndLegumes">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MiscellaneousPrimaryFoodCommodityFromPlantOrigin">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin">
+  <rdfs:subClassOf rdf:resource="#PlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MilledCerealProducts">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SoybeanProducts">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sweeteners">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OilsAndFats">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DoughBasedProducts">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Noodles">
+  <rdfs:subClassOf rdf:resource="#DoughBasedProducts"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pasta">
+  <rdfs:subClassOf rdf:resource="#DoughBasedProducts"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FrozenFood">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PackagedFriedFood">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SaucesAndCondiments">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromPlantOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Chutneys">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DriedPowders">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sauce">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Acids">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Flavourings">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pickle">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Dips">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PastesAndSpreads">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MiscellaneousSaucesAndCondiments">
+  <rdfs:subClassOf rdf:resource="#SaucesAndCondiments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AnimalOrigin">
+  <rdfs:subClassOf rdf:resource="#FoodIngredients"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PrimaryFoodCommodityFromAnimalOrigin">
+  <rdfs:subClassOf rdf:resource="#AnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PoultryProduct">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Egg">
+  <rdfs:subClassOf rdf:resource="#PoultryProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatFromPoultryProduct">
+  <rdfs:subClassOf rdf:resource="#PoultryProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatFromChicken">
+  <rdfs:subClassOf rdf:resource="#MeatFromPoultryProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MiscellaneousMeatFromPoultryProduct">
+  <rdfs:subClassOf rdf:resource="#MeatFromPoultryProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MammalianProduct">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatFromMammalianProduct">
+  <rdfs:subClassOf rdf:resource="#MammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatFromCattle">
+  <rdfs:subClassOf rdf:resource="#MeatFromMammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatFromPig">
+  <rdfs:subClassOf rdf:resource="#MeatFromMammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatFromGoat">
+  <rdfs:subClassOf rdf:resource="#MeatFromMammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatFromLamb">
+  <rdfs:subClassOf rdf:resource="#MeatFromMammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatFromDeer">
+  <rdfs:subClassOf rdf:resource="#MeatFromMammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MiscellaneousMeatFromMammalianProduct">
+  <rdfs:subClassOf rdf:resource="#MeatFromMammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MilkBasedOrDairy">
+  <rdfs:subClassOf rdf:resource="#MammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AnimalFat">
+  <rdfs:subClassOf rdf:resource="#MammalianProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MarineProductOrSeafood">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#InsectProduct">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SecondaryFoodCommodityOrProcessedFoodFromAnimalOrigin">
+  <rdfs:subClassOf rdf:resource="#AnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CannedMeatAndSeafood">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SmokedMeatAndSeafood">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SausageMeatAndSeafood">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DriedOrCuredOrSlicedMeatAndSeafood">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PackagedPate">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FrozenMeatAndSeafood">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ReadyToEatFoodWithMeatAndSeafood">
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromAnimalOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FungusOrigin">
+  <rdfs:subClassOf rdf:resource="#FoodIngredients"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PrimaryFoodCommodityFromFungusOrigin">
+  <rdfs:subClassOf rdf:resource="#FungusOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mushroom">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromFungusOrigin"/>
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromFungusOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Yeast">
+  <rdfs:subClassOf rdf:resource="#PrimaryFoodCommodityFromFungusOrigin"/>
+  <rdfs:subClassOf rdf:resource="#SecondaryFoodCommodityOrProcessedFoodFromFungusOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SecondaryFoodCommodityOrProcessedFoodFromFungusOrigin">
+  <rdfs:subClassOf rdf:resource="#FungusOrigin"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ChemicalFoodProduct">
+  <rdfs:subClassOf rdf:resource="#FoodIngredients"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EmulsifiersAndStabilizers">
+  <rdfs:subClassOf rdf:resource="#ChemicalFoodProduct"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MiscellaneousChemicalFoodProduct">
+  <rdfs:subClassOf rdf:resource="#ChemicalFoodProduct"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Ackee">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Apple">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Apricot">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Avocado">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Barbados Cherry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Barberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black Sapote">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Blackberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bilimbi">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Burmese Grape">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cactus Pear">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cape Gooseberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cherry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cherry Guava">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chikoo">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chilean Guava Berry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cranberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Custard Apple">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dates">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dragon Fruit">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Durian">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Elderberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Figs">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dried grapes">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Grapes">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Goji Berry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Golden Berry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gooseberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Guava">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Java Apple">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Java Plum">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jujube">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Karonda">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kiwi">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kiwi Berry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kokum">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kumquat">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Langsat">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lemon">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lime">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Longan">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lychee">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mangosteen">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mulberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Muscadine">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Muskmelon">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nance">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Naranjilla">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Papaya">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Passion Fruit">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peach">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pear">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Persimmon">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pineapple">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pitanga">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pitaya">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Plum">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pomegranate">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Prickly Pear">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rambutan">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Raspberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Raw mango">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Redcurrant">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rose Apple">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salak">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salal Berry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Santol">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sapodilla">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soursop">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Star Gooseberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Starfruit">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Strawberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sugar Apple">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Surinam Cherry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tamarind">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Thimbleberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Watermelon">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wild melon">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wintergreen">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wood Apple">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yumberry">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Squash">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Luffe">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Snake Gourd">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Calabash">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ash Gourd">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pointed Gourd">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sponge Gourd">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ivy Gourd">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bitter melon">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cucumber">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pumpkin">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Persian cucumbers">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Zucchini">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chayote">
+  <rdf:type rdf:resource="#CucumbersGourdsAndSquashes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Amaranth">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Brussels Sprout">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Celery">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chickweed">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Drumstick leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fenugreek">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Garden cress">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lamb's quarters">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Malabar spinach">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nettle">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pennywort">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Purslane">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shepherd's purse">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Roselle leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Indian Sorrel">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spinach">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Water spinach">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Watercress">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bok Choy">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Broccoli leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cabbage">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Collard greens">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kale">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coriander leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Curry leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dill leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lettuce">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mint leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mustard greens">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chard">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Red Swiss Chard">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green Swiss Chard">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Colocasia Leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Red Cabbage">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Romaine Lettuce">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rocket Leaves">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Red Lettuce">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Iceberg Lettuce">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chinese Cabbage">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicory">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nori">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wakame">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sea Lettuce">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green laver">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sea grape">
+  <rdf:type rdf:resource="#LeafySaladAndSeaVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cauliflower">
+  <rdf:type rdf:resource="#EdibleFlowers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Broccoli">
+  <rdf:type rdf:resource="#EdibleFlowers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Artichoke">
+  <rdf:type rdf:resource="#EdibleFlowers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pumpkin Flower">
+  <rdf:type rdf:resource="#EdibleFlowers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Onion">
+  <rdf:type rdf:resource="#BulbAndStemVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spring Onion">
+  <rdf:type rdf:resource="#BulbAndStemVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shallot">
+  <rdf:type rdf:resource="#BulbAndStemVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Asparagus">
+  <rdf:type rdf:resource="#BulbAndStemVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kohlrabi">
+  <rdf:type rdf:resource="#BulbAndStemVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#garlic">
+  <rdf:type rdf:resource="#BulbAndStemVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Leek">
+  <rdf:type rdf:resource="#BulbAndStemVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Potato">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ginger">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Radish">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beetroot">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sweet Potato">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turnip">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yam">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Taro Root">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cassava">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Water chestnut">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Parsnip">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salsify">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Arrowroot">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fennel Bulb">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jicama">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Carrot">
+  <rdf:type rdf:resource="#RootAndTuberousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green chilli">
+  <rdf:type rdf:resource="#ChilliesAndCapsicums"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kashmiri Chilli">
+  <rdf:type rdf:resource="#ChilliesAndCapsicums"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Guntur Chilli">
+  <rdf:type rdf:resource="#ChilliesAndCapsicums"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bell pepper">
+  <rdf:type rdf:resource="#ChilliesAndCapsicums"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tabasco pepper">
+  <rdf:type rdf:resource="#ChilliesAndCapsicums"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cayenne Pepper">
+  <rdf:type rdf:resource="#ChilliesAndCapsicums"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jalapeño">
+  <rdf:type rdf:resource="#ChilliesAndCapsicums"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tomato">
+  <rdf:type rdf:resource="#MiscellaneousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Brinjal">
+  <rdf:type rdf:resource="#MiscellaneousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jackfruit">
+  <rdf:type rdf:resource="#MiscellaneousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ladyfinger">
+  <rdf:type rdf:resource="#MiscellaneousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Drumstick">
+  <rdf:type rdf:resource="#MiscellaneousVegetables"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ajwain">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aniseed">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Asafoetida">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bay leaf">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black cardamom">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black cumin">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black mustard seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black peppercorns">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black rock salt">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black salt">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Caraway seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cardamom">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cardamom powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cinnamon">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clove powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cloves">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coriander powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coriander seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cubeb pepper">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cumin powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cumin seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dried ginger powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fennel seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fenugreek seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Garam masala">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green cardamom">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Himalayan pink salt">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Indian bay leaf">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Indian gooseberry">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Indian long pepper">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kasuri methi">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kokum powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Long pepper">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mace">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango pickle masala">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Moringa">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mustard seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nigella seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nutmeg">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Parsley">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peppermint">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dried pomegranate seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Poppy seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oregano">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Red chili flakes">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Red chili powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rock salt">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Safflower">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Saffron">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sesame">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sichuan pepper">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Star anise">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Szechuan pepper">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tamarind concentrate">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Triphala">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turmeric powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vidanga">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#White cumin">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#White pepper powder">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#White salt">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#White turmeric">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yellow mustard seeds">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turmeric">
+  <rdf:type rdf:resource="#HerbsAndSpices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Almonds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cashews">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pistachios">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Walnuts">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peanuts">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Niger seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pumpkin seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sunflower seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Flaxseeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chia seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Watermelon seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Melon seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pine nuts">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pecan">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hazelnuts">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Brazil nuts">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Macadamia nuts">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lotus seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Safflower seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ajwain seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sesame seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black sesame seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#White sesame seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pomegranate seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Anise seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tamarind seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Basil seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Methi seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black cumin seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Carom seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dill seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Celery seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Brown mustard seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hemp seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wheat">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Maize">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sorghum">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pearl Millet">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Finger Millet">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Barley">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oats">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tapioca">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Quinoa">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Buckwheat">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Foxtail Millet">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Proso Millet">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Little millet">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kodo millet">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Barnyard millet">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Job's Tears">
+  <rdf:type rdf:resource="#Cereals"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black Lentil">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black-eyed pea">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Garbanzo Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Horse gram">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kidney Bean">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dew bean">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mung bean">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green Pea">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pigeon pea">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pulses">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Red Lentils">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yellow Lentils">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yello Gram">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black Chickpeas">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ricebeans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Field Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yellow peas">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#White peas">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#White Lentils">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hyacinth Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Broad Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lima Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Edamame">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soybean">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Adzuki Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cannellini Bean">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pinto Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Navy Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green Chickpea">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#French Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cluster Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yardlong Beans">
+  <rdf:type rdf:resource="#PulsesAndLegumes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sugarcane">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromPlantOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#All-Purpose Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tapioca Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Whole Wheat Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chickpea Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Quinoa flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Semolina">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Finger Millet Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pearl Millet Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sorghum Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Maize Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Multigrain Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Barley Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Amaranth Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Roasted Gram Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Buckwheat Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Water Chestnut Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Almond Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cashew Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green Gram Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black Gram Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dew Bean Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chickpea and Rice Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chickpea and Wheat Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jowar and Bajra Flour">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Seitan">
+  <rdf:type rdf:resource="#MilledCerealProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soya Chunks">
+  <rdf:type rdf:resource="#SoybeanProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#or Soya Nuggets">
+  <rdf:type rdf:resource="#SoybeanProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soy Flour">
+  <rdf:type rdf:resource="#SoybeanProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soya Milk">
+  <rdf:type rdf:resource="#SoybeanProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soya Chaap">
+  <rdf:type rdf:resource="#SoybeanProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tofu">
+  <rdf:type rdf:resource="#SoybeanProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Okara">
+  <rdf:type rdf:resource="#SoybeanProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tempeh">
+  <rdf:type rdf:resource="#SoybeanProducts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sugar">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jaggery">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Honey">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Maple syrup">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Palm sugar">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Date syrup">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut sugar">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Agave nectar">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stevia">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Artificial sweeteners">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Molasses">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sorghum syrup">
+  <rdf:type rdf:resource="#Sweeteners"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mustard oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sesame oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sunflower oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vegetable oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peanut oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Canola oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Corn oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soybean oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Olive oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice bran oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Palm oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Margarine">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Safflower oil">
+  <rdf:type rdf:resource="#OilsAndFats"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice Noodles">
+  <rdf:type rdf:resource="#Noodles"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Udon Noodles">
+  <rdf:type rdf:resource="#Noodles"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cellophane noodles">
+  <rdf:type rdf:resource="#Noodles"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wanko soba">
+  <rdf:type rdf:resource="#Noodles"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yakisoba">
+  <rdf:type rdf:resource="#Noodles"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fried noodles">
+  <rdf:type rdf:resource="#Noodles"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wheat Vermicelli">
+  <rdf:type rdf:resource="#Noodles"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Macaroni">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Penne">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fusilli">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spaghetti">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Farfalle">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Conchiglie">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rigatoni">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rotini">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Linguine">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tagliatelle">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Orzo">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cannelloni">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lasagna">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ravioli">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tortellini">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gnocchi">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Couscous">
+  <rdf:type rdf:resource="#Pasta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Frozen vegetables">
+  <rdf:type rdf:resource="#FrozenFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#French fries">
+  <rdf:type rdf:resource="#FrozenFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Potato bites">
+  <rdf:type rdf:resource="#FrozenFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Potato nuggets">
+  <rdf:type rdf:resource="#FrozenFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veg Burger patty">
+  <rdf:type rdf:resource="#FrozenFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chips and crackers">
+  <rdf:type rdf:resource="#PackagedFriedFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chammanthi podi">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Garlic chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lime chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Onion chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Saunth chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tomato chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tamarind chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mint chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coriander chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Date chutney">
+  <rdf:type rdf:resource="#Chutneys"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dry mango powder">
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ajwain powder">
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Asafoetida powder">
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Curry leaves powder">
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ginger powder">
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Himalayan salt">
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jira powder">
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rai powder">
+  <rdf:type rdf:resource="#DriedPowders"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tomato ketchup">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chili sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soy sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chili-garlic sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sweet and sour sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hot sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hoisin sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mustard sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Worcestershire sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Schezwan sauce">
+  <rdf:type rdf:resource="#Sauce"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salsa">
+  <rdf:type rdf:resource="#Sauce"/>
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Apple cider vinegar">
+  <rdf:type rdf:resource="#Acids"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#White vinegar">
+  <rdf:type rdf:resource="#Acids"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice vinegar">
+  <rdf:type rdf:resource="#Acids"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Balsamic vinegar">
+  <rdf:type rdf:resource="#Acids"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tamarind pulp">
+  <rdf:type rdf:resource="#Acids"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lemon juice">
+  <rdf:type rdf:resource="#Acids"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vanilla Essence">
+  <rdf:type rdf:resource="#Flavourings"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chocolate syrup">
+  <rdf:type rdf:resource="#Flavourings"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Grated Coconut">
+  <rdf:type rdf:resource="#Flavourings"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut milk">
+  <rdf:type rdf:resource="#Flavourings"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rose water">
+  <rdf:type rdf:resource="#Flavourings"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kewra water">
+  <rdf:type rdf:resource="#Flavourings"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lime pickle">
+  <rdf:type rdf:resource="#Pickle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango pickle">
+  <rdf:type rdf:resource="#Pickle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mixed vegetable pickle">
+  <rdf:type rdf:resource="#Pickle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Garlic pickle">
+  <rdf:type rdf:resource="#Pickle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Onion pickle">
+  <rdf:type rdf:resource="#Pickle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chili pickle">
+  <rdf:type rdf:resource="#Pickle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hummus">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Guacamole">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Queso Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spinach Artichoke Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Buffalo Chicken Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ranch Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Blue Cheese Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#French Onion Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tzatziki">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Baba Ganoush">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pesto Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Seven Layer Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bean Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cheese Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Garlic Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yogurt Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Avocado Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sweet Chili Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Honey Mustard Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BBQ Sauce">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Marinara Sauce">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aioli">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nacho Cheese Sauce">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chili Con Queso">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peanut Sauce">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soy Sauce">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Teriyaki Sauce">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tahini">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Caramel Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chocolate Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fruit Dip">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tomato Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mint Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tamarind Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Garlic Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Schezwan Sauce">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Green Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Raita">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coriander Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Imli Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pudina Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bhutte Ka Kees">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dahi Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peanut Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sesame Chutney">
+  <rdf:type rdf:resource="#Dips"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#mayonnaise">
+  <rdf:type rdf:resource="#PastesAndSpreads"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sour cream">
+  <rdf:type rdf:resource="#MiscellaneousSaucesAndCondiments"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#raita">
+  <rdf:type rdf:resource="#MiscellaneousSaucesAndCondiments"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#papad">
+  <rdf:type rdf:resource="#MiscellaneousSaucesAndCondiments"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#far-far">
+  <rdf:type rdf:resource="#MiscellaneousSaucesAndCondiments"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Eggs">
+  <rdf:type rdf:resource="#Egg"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Duck Eggs">
+  <rdf:type rdf:resource="#Egg"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Quail Eggs">
+  <rdf:type rdf:resource="#Egg"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Goose Eggs">
+  <rdf:type rdf:resource="#Egg"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turkey Eggs">
+  <rdf:type rdf:resource="#Egg"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Guinea Fowl Eggs">
+  <rdf:type rdf:resource="#Egg"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pigeon Eggs">
+  <rdf:type rdf:resource="#Egg"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken breast">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Broiler Chicken">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Country Chicken">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cornish Chicken">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Breast">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Thigh">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Drumsticks">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Wings">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Liver">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Gizzards">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Hearts">
+  <rdf:type rdf:resource="#MeatFromChicken"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turkey">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Emu">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ostrich">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Guinea Fowl">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Goose">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Duck">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Quail">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pigeon">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Partridge">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Squab">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dove">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pheasant">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromPoultryProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beef">
+  <rdf:type rdf:resource="#MeatFromCattle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veal">
+  <rdf:type rdf:resource="#MeatFromCattle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Buff">
+  <rdf:type rdf:resource="#MeatFromCattle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bison">
+  <rdf:type rdf:resource="#MeatFromCattle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pork">
+  <rdf:type rdf:resource="#MeatFromPig"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pork loin">
+  <rdf:type rdf:resource="#MeatFromPig"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wild Boar">
+  <rdf:type rdf:resource="#MeatFromPig"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chevon">
+  <rdf:type rdf:resource="#MeatFromGoat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Goat">
+  <rdf:type rdf:resource="#MeatFromGoat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mutton">
+  <rdf:type rdf:resource="#MeatFromLamb"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lamb">
+  <rdf:type rdf:resource="#MeatFromLamb"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sheep">
+  <rdf:type rdf:resource="#MeatFromLamb"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Venison">
+  <rdf:type rdf:resource="#MeatFromDeer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Elk">
+  <rdf:type rdf:resource="#MeatFromDeer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rabbit">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromMammalianProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kangaroo">
+  <rdf:type rdf:resource="#MiscellaneousMeatFromMammalianProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Butter">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clarified butter">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Buttermilk">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cheese">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chhena">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Condensed Milk">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Curd">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dahi">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ghee">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ice Cream">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Khoya">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Khoa">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lassi">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cream">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milk">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paneer">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rabri">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shrikhand">
+  <rdf:type rdf:resource="#MilkBasedOrDairy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lard">
+  <rdf:type rdf:resource="#AnimalFat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tallow">
+  <rdf:type rdf:resource="#AnimalFat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Prawn">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Crab">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Squid">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Octopus">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clam">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oyster">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lobster">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sardine">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salmon">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Trout">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tuna">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pomfret">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tilapia">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Haddock">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Carp">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sole">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Barramundi">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Catfish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mackerel">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mahi Mahi">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Perch">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Seer fish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Swordfish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Whitebait">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bengal Carp">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black Pomfret">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rohu Fish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hilsa Fish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Katla Fish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Anchovy Fish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Basa Fish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bombay Duck">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kingfish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Herring">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shark">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cuttlefish">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Blue Crab">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mud Crab">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tiger Prawn">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shrimp">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jumbo Prawn">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rock Lobster">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spiny Lobster">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mussels">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Scallop">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Abalone">
+  <rdf:type rdf:resource="#MarineProductOrSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cricket">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mealworm">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Locust">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cockroach">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Grasshopper">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ant">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Worm">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beetle">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fly">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Scorpion">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Caterpillars">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Termites">
+  <rdf:type rdf:resource="#InsectProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Escargot">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Snail">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Frog Legs">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Alligator">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turtle">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Squirrel">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rattlesnake">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Python">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Crocodile">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Monitor Lizard">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tortoise">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Iguana">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Frog">
+  <rdf:type rdf:resource="#MiscellaneousPrimaryFoodCommodityFromAnimalOrigin"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken salad">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Deviled ham">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turkey chili">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Canned fish">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sardines">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Anchovies">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shrimp cocktail">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Crab cakes">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fish fillets">
+  <rdf:type rdf:resource="#CannedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Smoked Ham">
+  <rdf:type rdf:resource="#SmokedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Smoked Bacon">
+  <rdf:type rdf:resource="#SmokedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Smoked Turkey">
+  <rdf:type rdf:resource="#SmokedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Smoked Salmon">
+  <rdf:type rdf:resource="#SmokedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Breakfast sausages">
+  <rdf:type rdf:resource="#SausageMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bratwurst">
+  <rdf:type rdf:resource="#SausageMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chorizo">
+  <rdf:type rdf:resource="#SausageMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Italian sausage">
+  <rdf:type rdf:resource="#SausageMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fish sausage">
+  <rdf:type rdf:resource="#SausageMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beef jerky">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turkey jerky">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salmon jerky">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Octopus chips">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dried shrimp">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shark cartilage">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salami">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pepperoni">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Prosciutto">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bresaola">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sliced turkey">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Roast beef">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ham">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pastrami">
+  <rdf:type rdf:resource="#DriedOrCuredOrSlicedMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#liver pâté">
+  <rdf:type rdf:resource="#PackagedPate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tuna dish pâté">
+  <rdf:type rdf:resource="#PackagedPate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pork pâté">
+  <rdf:type rdf:resource="#PackagedPate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#breaded chicken nuggets">
+  <rdf:type rdf:resource="#FrozenMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#fish sticks">
+  <rdf:type rdf:resource="#FrozenMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beef Burger patty">
+  <rdf:type rdf:resource="#FrozenMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fish sauce">
+  <rdf:type rdf:resource="#SaucesAndCondiments"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken pickle">
+  <rdf:type rdf:resource="#SaucesAndCondiments"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken noodle soup">
+  <rdf:type rdf:resource="#ReadyToEatFoodWithMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Canned Beef stew">
+  <rdf:type rdf:resource="#ReadyToEatFoodWithMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Canned Clam chowder">
+  <rdf:type rdf:resource="#ReadyToEatFoodWithMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Canned tuna salad">
+  <rdf:type rdf:resource="#ReadyToEatFoodWithMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Frozen Lasagna">
+  <rdf:type rdf:resource="#ReadyToEatFoodWithMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shepherd's pie">
+  <rdf:type rdf:resource="#ReadyToEatFoodWithMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken pot pie">
+  <rdf:type rdf:resource="#ReadyToEatFoodWithMeatAndSeafood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Button Mushroom">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oyster Mushroom">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shiitake Mushroom">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Morel Mushroom">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chanterelle Mushroom">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Porcini Mushroom">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Enoki Mushroom">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wood Ear Mushroom">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mushroom varieties from the Western Ghats">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Local Wild Mushrooms">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Commercial Baker's Yeast">
+  <rdf:type rdf:resource="#Yeast"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Natural Wild Yeast">
+  <rdf:type rdf:resource="#Yeast"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mushroom Pickle">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sliced button mushrooms">
+  <rdf:type rdf:resource="#Mushroom"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Idli Batter">
+  <rdf:type rdf:resource="#Yeast"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bread">
+  <rdf:type rdf:resource="#Yeast"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Muffin">
+  <rdf:type rdf:resource="#Yeast"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Croissant">
+  <rdf:type rdf:resource="#Yeast"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Biscuit">
+  <rdf:type rdf:resource="#Yeast"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cookie">
+  <rdf:type rdf:resource="#Yeast"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lecithin">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Xanthan gum">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Guar gum">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Agar-agar">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pectin">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gellan gum">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Carboxymethyl cellulose">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sodium alginate">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Carrageenan">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Glycerol monostearate">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mono- and diglycerides">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Polysorbate 80">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sorbitan monostearate">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Acacia gum">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Arabic gum">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gum tragacanth">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Locust bean gum">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cellulose gum">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Microcrystalline cellulose">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sodium carboxymethylcellulose">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Propylene glycol alginate">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Polyglycerol esters of fatty acids">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sucrose acetate isobutyrate">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Polyglycerol polyricinoleate">
+  <rdf:type rdf:resource="#EmulsifiersAndStabilizers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Baking soda">
+  <rdf:type rdf:resource="#MiscellaneousChemicalFoodProduct"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Baking powder">
+  <rdf:type rdf:resource="#MiscellaneousChemicalFoodProduct"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

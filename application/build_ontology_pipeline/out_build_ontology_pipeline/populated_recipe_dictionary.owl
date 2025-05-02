@@ -1,0 +1,1639 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/food_ontology.owl"
+         xmlns="http://example.org/food_ontology.owl#">
+
+<owl:Ontology rdf:about="http://example.org/food_ontology.owl"/>
+
+<owl:Class rdf:about="#FoodRecipes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DrinksAndBeverages">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Alcoholic">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LowAlcoholic">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cocktails">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mocktails">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CarbonatedBeverages">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HotBeverages">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ColdBeverages">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#InstantMixDrink">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FunctionalBeverages">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SpecialtyBeverages">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Juices">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Smoothies">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DairyBasedBeverages">
+  <rdfs:subClassOf rdf:resource="#DrinksAndBeverages"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FastFood">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Munchies">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Chips">
+  <rdfs:subClassOf rdf:resource="#Munchies"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NutsAndSeeds">
+  <rdfs:subClassOf rdf:resource="#Munchies"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Crackers">
+  <rdfs:subClassOf rdf:resource="#Munchies"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Popcorn">
+  <rdfs:subClassOf rdf:resource="#Munchies"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SnackBars">
+  <rdfs:subClassOf rdf:resource="#Munchies"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cookies">
+  <rdfs:subClassOf rdf:resource="#Munchies"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CandyAndSweets">
+  <rdfs:subClassOf rdf:resource="#Munchies"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BiscuitsAndRusks">
+  <rdfs:subClassOf rdf:resource="#Munchies"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SnackFood">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#StreetFood">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FingerFood">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Flatbreads">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sandwiches">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SoupsAndStews">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Salads">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CurriesAndGravyDishes">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LentilDishes">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RiceDishes">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NonRiceCerealBasedDishes">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Desserts">
+  <rdfs:subClassOf rdf:resource="#FoodRecipes"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Absinthe">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Arrack">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Arak">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Baijiu">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beer">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Brandy">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cider">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Feni">
+  <rdf:type rdf:resource="#Alcoholic"/>
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gin">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mead">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Neera">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rum">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sake">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sonti">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Palm wine or Toddy">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vodka">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Whiskey">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wine">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut Wine">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice Wine">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tharra">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chhang">
+  <rdf:type rdf:resource="#Alcoholic"/>
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soju">
+  <rdf:type rdf:resource="#Alcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mahua">
+  <rdf:type rdf:resource="#Alcoholic"/>
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Toddy">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kombucha (with slight alcohol)">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Handia">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aarey">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesar Kasturi">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sol Kadhi (with a slight alcoholic version)">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Palm Wine">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Apong">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice Beer">
+  <rdf:type rdf:resource="#LowAlcoholic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aam Panna Mojito">
+  <rdf:type rdf:resource="#Cocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kala Khatta Vodka">
+  <rdf:type rdf:resource="#Cocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spiced Guava Margarita">
+  <rdf:type rdf:resource="#Cocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Masala Martini">
+  <rdf:type rdf:resource="#Cocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chai Whiskey Sour">
+  <rdf:type rdf:resource="#Cocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut Water Mojito">
+  <rdf:type rdf:resource="#Cocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nimbu Pani Gin Fizz">
+  <rdf:type rdf:resource="#Cocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tamarind Margarita">
+  <rdf:type rdf:resource="#Cocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aam Panna">
+  <rdf:type rdf:resource="#Mocktails"/>
+  <rdf:type rdf:resource="#ColdBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jaljeera">
+  <rdf:type rdf:resource="#Mocktails"/>
+  <rdf:type rdf:resource="#ColdBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nimbu Pani">
+  <rdf:type rdf:resource="#Mocktails"/>
+  <rdf:type rdf:resource="#ColdBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Masala Shikanji">
+  <rdf:type rdf:resource="#Mocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rose Lemonade">
+  <rdf:type rdf:resource="#Mocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Virgin Mojito">
+  <rdf:type rdf:resource="#Mocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Khus Cooler">
+  <rdf:type rdf:resource="#Mocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Thandai">
+  <rdf:type rdf:resource="#Mocktails"/>
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Litchi Lemonade">
+  <rdf:type rdf:resource="#Mocktails"/>
+  <rdf:type rdf:resource="#ColdBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut Punch">
+  <rdf:type rdf:resource="#Mocktails"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Thumbs Up">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Limca">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sprite">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fanta">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Maaza">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Appy Fizz">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pepsi">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coca-Cola">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mountain Dew">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mirinda">
+  <rdf:type rdf:resource="#CarbonatedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Masala Chai">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Filter Coffee">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ginger Tea">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Elaichi Chai">
+  <rdf:type rdf:resource="#HotBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesar Chai">
+  <rdf:type rdf:resource="#HotBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kahwa">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turmeric Latte (Golden Milk)">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Herbal Green Tea">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sulaimani Tea">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tandoori Chai">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#South Indian Filter Coffee">
+  <rdf:type rdf:resource="#HotBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Black Tea">
+  <rdf:type rdf:resource="#HotBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lemon Tea">
+  <rdf:type rdf:resource="#HotBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tulsi Tea">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ashwagandha Tea">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Badam Milk">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hot Chocolate">
+  <rdf:type rdf:resource="#HotBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jaggery Tea">
+  <rdf:type rdf:resource="#HotBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spiced Milk">
+  <rdf:type rdf:resource="#HotBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Herbal Kashayam">
+  <rdf:type rdf:resource="#HotBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lassi">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chaas (Buttermilk)">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rose Milk">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Falooda">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kokum Sharbat">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sattu Drink">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sol Kadhi">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sugarcane Juice">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tender Coconut Water">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cold Coffee">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Masala Chaas">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nannari Sharbat">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Watermelon Juice">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango Shake">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Khus Sharbat">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rose Sherbet">
+  <rdf:type rdf:resource="#ColdBeverages"/>
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Instant Coffee">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Instant Tea">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Badam Milk Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Thandai Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Masala Milk Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Instant Hot Chocolate">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sattu Drink Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ragi Malt Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesar Milk Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rose Milk Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chai Latte Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Instant Lemon Tea">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Elaichi Milk Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turmeric Latte Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ginger Tea Mix">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Horlicks">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bournvita">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Complan">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Boost">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ovaltine">
+  <rdf:type rdf:resource="#InstantMixDrink"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aloe Vera Juice">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Amla Juice">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kombucha">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Wheatgrass Juice">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Moringa Juice">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Brahmi Juice">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Giloy Juice">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bael Juice">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Neem Juice">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lemon Honey Water">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jaggery Water">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fennel Water">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jeera Water">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ragi Malt">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Barley Water">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chia Seed Drink">
+  <rdf:type rdf:resource="#FunctionalBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paan Shot">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rasam">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bhang Thandai">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bael Sharbat">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aam Ras">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lemon Ginger Honey Tea">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kanji">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesari Milk">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesar Pista Milk">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Neer Mor">
+  <rdf:type rdf:resource="#SpecialtyBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Orange Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pineapple Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mosambi (Sweet Lime) Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pomegranate Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Carrot Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beetroot Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Litchi Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Guava Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Papaya Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Apple Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ginger Lemon Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Grape Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tamarind Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kokum Juice">
+  <rdf:type rdf:resource="#Juices"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Banana Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Papaya Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mixed Fruit Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Strawberry Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pineapple Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Apple Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Avocado Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spinach Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cucumber Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beetroot Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Carrot Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dates Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fig Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kiwi Smoothie">
+  <rdf:type rdf:resource="#Smoothies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Masala Milk">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sweet Lassi">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salted Lassi">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango Lassi">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chikoo Milkshake">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kulfi Falooda">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Saffron Milk">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milk Tea (Chai)">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Doodh Peda Drink">
+  <rdf:type rdf:resource="#DairyBasedBeverages"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paneer Tikka">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Samosa">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vada Pav">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pav Bhaji">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chole Bhature">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aloo Tikki">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pani Puri">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bhel Puri">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sev Puri">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dahi Puri">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ragda Pattice">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dabeli">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kathi Roll">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veg Kathi Roll">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Kathi Roll">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Egg Kathi Roll">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Frankie">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veg Frankie">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Frankie">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paneer Frankie">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kachori">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pyaz Kachori">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Matar Kachori">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Raj Kachori">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bhajji">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Onion Bhajji">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mirchi Bhajji">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pakora">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paneer Pakora">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aloo Pakora">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Palak Pakora">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bread Pakora">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Momos">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veg Momos">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Momos">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paneer Momos">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hakka Noodles">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veg Hakka Noodles">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Hakka Noodles">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spring Rolls">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veg Spring Rolls">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chow Mein">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veg Chow Mein">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Burger">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veggie Burger">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Burger">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aloo Tikki Burger">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cheeseburger">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hamburger">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pizza">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veggie Pizza">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paneer Pizza">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Pizza">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tandoori Paneer Pizza">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pepperoni Pizza">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Margherita Pizza">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#French Fries">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Masala Fries">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Onion Rings">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mozzarella Sticks">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Nuggets">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aloo Chaat">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fruit Chaat">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kulfi">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gulab Jamun">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jalebi">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rasgulla">
+  <rdf:type rdf:resource="#FastFood"/>
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ice Cream">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken Wings">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hot Dogs">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Classic Hot Dog">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chili Dog">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Veggie Dog">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Corn Dog">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Potato Wedges">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nachos">
+  <rdf:type rdf:resource="#FastFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peanuts">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Almonds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cashews">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sunflower Seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pumpkin Seeds">
+  <rdf:type rdf:resource="#NutsAndSeeds"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cheese Crackers">
+  <rdf:type rdf:resource="#Crackers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Whole Grain Crackers">
+  <rdf:type rdf:resource="#Crackers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice Crackers">
+  <rdf:type rdf:resource="#Crackers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Multigrain Crackers">
+  <rdf:type rdf:resource="#Crackers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Buttered Popcorn">
+  <rdf:type rdf:resource="#Popcorn"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cheese Popcorn">
+  <rdf:type rdf:resource="#Popcorn"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Caramel Popcorn">
+  <rdf:type rdf:resource="#Popcorn"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spicy Popcorn">
+  <rdf:type rdf:resource="#Popcorn"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Granola Bars">
+  <rdf:type rdf:resource="#SnackBars"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Protein Bars">
+  <rdf:type rdf:resource="#SnackBars"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cereal Bars">
+  <rdf:type rdf:resource="#SnackBars"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nut Bars">
+  <rdf:type rdf:resource="#SnackBars"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chocolate Chip Cookies">
+  <rdf:type rdf:resource="#Cookies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oatmeal Cookies">
+  <rdf:type rdf:resource="#Cookies"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chocolate Bars">
+  <rdf:type rdf:resource="#CandyAndSweets"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hard Candies">
+  <rdf:type rdf:resource="#CandyAndSweets"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Toffees">
+  <rdf:type rdf:resource="#CandyAndSweets"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Digestive Biscuits">
+  <rdf:type rdf:resource="#BiscuitsAndRusks"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Butter Biscuits">
+  <rdf:type rdf:resource="#BiscuitsAndRusks"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rusk">
+  <rdf:type rdf:resource="#BiscuitsAndRusks"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pyaaz Kachori">
+  <rdf:type rdf:resource="#SnackFood"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aam Shrikhand">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aamrakhand">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Anarsa">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Anjeer Halwa">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Badam Pista Roll">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Balushahi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Basundi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Besan Barfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Besan Halwa">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Besan Ladoo">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Boondi Ladoo">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cham Cham">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut Barfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coconut Ladoo">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dharwad Peda">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Doodh Pak">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Doodh Peda">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Doodhi Halwa">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gajar Ka Halwa">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gajar Ki Barfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ghevar">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gujiya">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kaju Anjeer Barfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kaju Gulkand Barfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kaju Katli">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kaju Pista Roll">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kalakand">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesar Malai Peda">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesar Peda">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesar Phirni">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kesar Kaju Katli">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Khoya Burfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ladoo">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Malai Peda">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Makkan Peda">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango Kulfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango Phirni">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mango Shrikhand">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mawa Burfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milk Cake">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mishti Doi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Modak">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Moong Dal Halwa">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Moong Dal Ladoo">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mysore Pak">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nariyal Ki Barfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Patishapta">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Patisa">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pineapple Kesari">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pistachio Barfi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Puran Poli">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rabri">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ras Malai">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rasmalai">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rava Kheer">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rava Kesari">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rava Ladoo">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sandesh">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sheer Khurma">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sheera">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shrikhand">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shahi Tukda">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shahi Kheer">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shahi Tukra">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sohan Papdi">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sohan Halwa">
+  <rdf:type rdf:resource="#Desserts"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

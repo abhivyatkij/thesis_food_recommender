@@ -1,0 +1,19 @@
+{
+  "age": 40,
+  "sex": "F",
+  "activity_level": "active",
+  "diet": "non vegetarian",
+  "allergies": [],
+  "medical_conditions": {
+    "diabetes": true,
+    "hypertension": false,
+    "pcos": true
+  },
+  "avoid_food_preference": {
+    "breakfast": [
+      "fried"
+    ]
+  },
+  "calorie_goal": 2228,
+  "most_active_before": "lunch"
+}
