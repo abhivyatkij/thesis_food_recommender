@@ -1,5 +1,8 @@
-# recipe-ontology
-Recipe Ontology
+#food_recommendation_systen
+
+-This repo is made for my thesis, Sustained SATisfaction: Pseudo-Boolean Optimised Indian Diet Recommendations for Hypertension, Diabetes & PCOS. 
+
+- This is a food recommendation system made for people with non-communicable diseases such as diabetes, hypertension and PCOS. 
 
 - Use the 'make' command to setup the virtual environment and install the required libraries described in requirements.txt file.
 
