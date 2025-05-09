@@ -20,7 +20,13 @@ for ing in IngredientIRI.instances():
 # Remove duplicates and sort
 ingredients = sorted(set(ingredients))
 
-
+course_counts = {
+        "Breakfast": 0,
+        "Lunch": 0,
+        "Snacks": 0,
+        "Dinner": 0,
+        "Other_or_No_Course": 0 # To count recipes with other course types or no course
+    }
 
 def extract_recipe_data(recipe):
     return {
@@ -33,6 +39,38 @@ def extract_recipe_data(recipe):
         ] if hasattr(recipe, "hasIngredient") else []
     }
 
+
+# Iterate through recipe instances
+print("Iterating through recipes...")
+for r in FoodRecipesIRI.instances():
+# Ensure it's a recipe instance and not the class itself
+# You might need to adjust this check based on your ontology structure
+    if onto.FoodRecipes in r.is_a: # A more robust check for instance of FoodRecipes class
+
+        # Check if the recipe has a 'hasCourse' property
+        if hasattr(r, 'hasCourse') and r.hasCourse:
+            # Get the course value(s). It can be a list.
+            courses = [str(course).lower() for course in r.hasCourse] # Convert to lowercase for case-insensitive matching
+            
+            # Check for the specified course types
+            found_known_course = False
+            if any("breakfast" in course for course in courses):
+                course_counts["Breakfast"] += 1
+                found_known_course = True
+            if any("lunch" in course for course in courses):
+                course_counts["Lunch"] += 1
+                found_known_course = True
+            if any("snacks" in course for course in courses):
+                course_counts["Snacks"] += 1
+                found_known_course = True
+            if any("dinner" in course for course in courses):
+                course_counts["Dinner"] += 1
+                found_known_course = True
+            
+            if not found_known_course:
+                course_counts["Other_or_No_Course"] +=1 # Count recipes with courses other than the specified ones
+        else:
+                course_counts["Other_or_No_Course"] += 1 # Count recipes with no course
 
 # Extract all valid recipes
 all_recipes = []
@@ -57,6 +95,9 @@ with open(recipe_json_path, "w") as f:
 with open(ingredient_path, "w") as f:
     json.dump(ingredients, f, indent=2)
 
-print("\n✔️ Total ingredients:", len(ingredients))
+print("\nTotal ingredients:", len(ingredients))
 print(f"Total recipes: {len(all_recipes)}\n\n")
-print("🧂 Sample:", ingredients[:10])
+print("\nRecipe counts by course:")
+for course, count in course_counts.items():
+     print(f"- {course}: {count}")
+print("\nSample:", ingredients[:10])

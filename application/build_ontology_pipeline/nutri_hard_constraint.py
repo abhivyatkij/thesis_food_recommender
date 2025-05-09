@@ -3,12 +3,10 @@ from rdflib import Graph
 import json
 from merged_food_recipe_design_ontology import designed_merged_ontology
 
-# Load your ontology
 owl_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'out_build_ontology_pipeline', 'nutri_mk_vri_recipe_nutrition_calculated.owl')
 onto = get_ontology("file://" + owl_file_path ).load()
 onto2 = designed_merged_ontology()
 
-#FoodRecipesIRI = onto.search_one(iri="file:/indian_food_ontology.owl#FoodRecipes")
 FoodRecipesIRI = onto.FoodRecipes  
 IngredientIRI = onto.search_one(iri="file:/indian_food_ontology.owl#FoodIngredients")
 
@@ -57,7 +55,6 @@ course_map = {
 }
 
 def get_user_profile():
-    # ── basic questions ──────────────────────────────────────────
     age = int(input("Enter your age in years: "))
     sex = input("Enter your sex (M/F): ").strip().upper()
     activity = input("Activity level (sedentary, moderately_active, active): ").strip().lower()
@@ -73,13 +70,11 @@ def get_user_profile():
     else:
         medical_condition["pcos"] = False #
 
-    # ── anthropometrics for BMI & calorie estimate ───────────────
     weight = float(input("Weight (kg): "))
     height_cm = float(input("Height (cm): "))
     height_m = height_cm / 100
     bmi = round(weight / (height_m ** 2), 1)
 
-    # Calculate BMR using Mifflin-St Jeor Equation
     bmr = (10 * weight) + (6.25 * height_cm) - (5 * age) + (5 if sex == "M" else -161)
     activity_factor_map = {
         "sedentary": 1.2,
@@ -92,11 +87,9 @@ def get_user_profile():
     print(f"\n🧮 Your Basal Metabolic Rate (BMR) is approximately {int(bmr)} kcal/day.")
     print(f"🚶 Based on your activity level ('{activity}'), your Total Daily Energy Expenditure (TDEE) is approximately {int(tdee)} kcal/day.")
 
-    # ── allergies -------------------------------------------------
     allergies_input = input("Any allergies? (comma-separated, or leave blank): ").strip()
     allergies = [a.strip().lower() for a in allergies_input.split(",")] if allergies_input else []
 
-    # ── per‑meal avoid list --------------------------------------
     avoid_food_preference = {}
     if input("Do you want to avoid any food types at specific meals? (y/N): ").strip().lower() == "y":
         print("Enter comma‑separated foods to avoid for each meal; press Enter to skip a meal.")
@@ -105,7 +98,6 @@ def get_user_profile():
             if items:
                 avoid_food_preference[slot] = [x.strip() for x in items.split(",") if x.strip()]
 
-    # ── optional calorie goal if overweight ----------------------
     calorie_goal = None
     if bmi >= 25:
         print(f"\n⚠️ Your BMI is {bmi} (≥ 25). Caloric restriction may be beneficial.")
@@ -118,13 +110,13 @@ def get_user_profile():
         if input("Would you like to use your TDEE as your calorie goal? (y/N): ").strip().lower() == "y":
             calorie_goal = int(tdee)
 
-    # ── normalise diet ───────────────────────────────────────────
     diet_map = {"veg": "vegetarian", "nonveg": "non vegetarian", "vegan": "vegan"}
     diet = diet_map.get(diet_pref, diet_pref)
 
-    # ── assemble user_constraints dictionary ─────────────────────
     user_constraints = {
         "age": age,
+        "weight": weight, 
+        "height": height_cm,
         "sex": sex,
         "activity_level": activity,
         "diet": diet,
@@ -136,12 +128,12 @@ def get_user_profile():
         user_constraints["calorie_goal"] = calorie_goal
 
     if user_constraints["medical_conditions"].get("pcos", False):
-        options = ["after breakfast", "after lunch", "after snacks", "after dinner"]
+        options = ["before breakfast", "before lunch", "before snacks", "before dinner"]
         mapping = {
-            "after breakfast": "breakfast",
-            "after lunch": "lunch",
-            "after snacks": "snacks",
-            "after dinner": "dinner"
+            "before breakfast": "breakfast",
+            "before lunch": "lunch",
+            "before snacks": "snacks",
+            "before dinner": "dinner"
         }
         choice = input(f"When are you most active? ({'/'.join(options)}): ").strip().lower()
         while choice not in mapping:
@@ -155,7 +147,6 @@ def resolve_ingredient(ing):
     if isinstance(ing, str):
         iri_part = ing.split("#")[-1].lower()
 
-        # Try resolving from both ontologies
         for onto_source in [onto2, onto]:
             resolved = onto_source.search_one(iri=f"*#{iri_part}")
             if resolved:
@@ -170,17 +161,15 @@ def resolve_ingredient(ing):
                     print(f"✔️ RESOLVED {iri_part} by IRI tail → {ind}")
                     return ind
 
-        # Fallback: if not resolvable, treat it as a special string-based case
-        #print(f"[SKIP] Could not resolve: {ing} — using keyword fallback for '{iri_part}'")
-        return iri_part  # 👈 Return the name string directly for manual keyword check
+        return iri_part 
 
-    return ing  # already resolved OWL Thing
+    return ing  
 
 
 
 def expand_allergy_terms(user_allergies):
     expanded = set()
-    detail_map = {}   # to record the source → expanded terms
+    detail_map = {}   
 
     for allergy in user_allergies:
         key = allergy.lower()
@@ -314,7 +303,7 @@ def diet_constraints():
 
     def is_recipe_allowed(recipe, user_constraints):
        
-        global rej1, rej2, rej3 # Track rejections
+        global rej1, rej2, rej3 
         user_diet = user_constraints["diet"].lower()
         recipe_name = recipe.name if hasattr(recipe, "name") else str(recipe)
 
@@ -364,10 +353,10 @@ def diet_constraints():
             continue  
 
         if is_recipe_allowed(recipe, user_constraints):
-            #print(f"✔️ {recipe.name}")
+            #print(f"Allowed : {recipe.name}")
             recommended_recipes.append(extract_recipe_data(recipe))
         else :
-            #print(f"❌ {recipe.name}")
+            #print(f"Rejected : {recipe.name}")
             rejected_recipes.append(extract_recipe_data(recipe))  
 
     return recommended_recipes, rejected_recipes
@@ -387,7 +376,7 @@ def allergies_constraints(recommended_recipes, rejected, user_constraints):
 
         # Exclude recipe if any allergen keyword is found in any ingredient
         if any(allergen in ing for ing in ingredient_names for allergen in allergy_terms):
-            # print(f"❌ Excluded recipe due to allergy match: {recipe['name']}")
+            # print(f"Excluded recipe due to allergy match: {recipe['name']}")
             rej4+=1
             excluded_recipes.append(recipe)
         else:
@@ -418,7 +407,7 @@ def violates_meal_specific_avoidance(recommended_recipes, rejected_allergy, user
                 avoid_keywords = avoid_map[slot]
                 for keyword in avoid_keywords:
                     if keyword in name or any(keyword in ing for ing in ingredients):
-                        #print(f"🚫 Rejected '{name}' due to '{keyword}' in {slot} avoid list.")
+                        #print(f"Rejected '{name}' due to '{keyword}' in {slot} avoid list.")
                         violated = True
                         break
             if violated:
@@ -439,7 +428,7 @@ if __name__ == "__main__":
 
 
     g = Graph()
-    g.parse(owl_file_path, format="xml")  # OWL is RDF/XML by default
+    g.parse(owl_file_path, format="xml")  
     re = []
     recommended_recipes = []
     rejected_recipes = []
@@ -469,7 +458,7 @@ if __name__ == "__main__":
 
     base_dir = os.path.join(os.path.dirname(owl_file_path), "recommended_recipes")
 
-    os.makedirs(base_dir, exist_ok=True) # Ensure the directory exists
+    os.makedirs(base_dir, exist_ok=True) 
 
     files_to_write = [
         ("user_constraints.json", user_constraints),
@@ -478,7 +467,6 @@ if __name__ == "__main__":
     ]
 
 
-    # --- Add this loop to write the files ---
     for filename, data in files_to_write:
         output_path = os.path.join(base_dir, filename)
         try:
@@ -487,7 +475,6 @@ if __name__ == "__main__":
             #print(f"Successfully wrote data to {output_path}")
         except Exception as e:
             print(f"Error writing file {output_path}: {e}")
-    # --- End of new loop ---
 
   
     print(f"\n\nFound {len(final_recipes)} recommended recipes for {user_constraints['diet'].lower()}s.")
