@@ -36,7 +36,7 @@ def list_recipes(num_to_print=10):
         if FoodRecipesIRI:
             all_recipes = list(onto.search(type=FoodRecipesIRI))
             print(f"Number of individual recipes: {len(all_recipes)}")
-            for recipe in all_recipes[:num_to_print]: # Print the first few
+            for recipe in all_recipes[:num_to_print]: 
                 if hasattr(recipe, 'label') and len(recipe.label) > 0:
                     print(f"- {recipe.label[0]}")
                 elif hasattr(recipe, 'name'):

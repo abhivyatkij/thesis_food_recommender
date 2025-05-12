@@ -29,14 +29,12 @@ VEGAN_EXCLUDE_CLASSES = VEGETARIAN_EXCLUDE_CLASSES.union({
     onto.AnimalFat
 })
 
-#!TODO let the allergies be custom inputted too 
 ALLERGY_KEYWORDS = {
     "dairy": ["milk", "cheese", "shredded_cheese", "yogurt", "plain_yogurt", "ghee", "butter", "paneer", "cream"],
     "gluten": ["wheat", "maida", "bread", "semolina", "sooji", "pasta"],
     "nuts": ["peanut", "almond", "cashew", "hazelnut", "walnut"],
     "soy": ["soy", "soybean", "tofu"],
     "shellfish": ["shrimp", "crab", "lobster"],
-    # Add more if needed
 }
 
 NONVEGETARIAN_KEYWORDS = ["chicken", "fish", "beef", "egg", "mutton", "pork", "shrimp", "meat", "crab", "lobster", "seafood", "prawns", "sardines", "tuna", "salmon", "mackerel", "squid", "octopus"]
@@ -84,8 +82,8 @@ def get_user_profile():
     activity_factor = activity_factor_map.get(activity, 1.2)
     tdee = bmr * activity_factor
 
-    print(f"\n🧮 Your Basal Metabolic Rate (BMR) is approximately {int(bmr)} kcal/day.")
-    print(f"🚶 Based on your activity level ('{activity}'), your Total Daily Energy Expenditure (TDEE) is approximately {int(tdee)} kcal/day.")
+    print(f"\nYour Basal Metabolic Rate (BMR) is approximately {int(bmr)} kcal/day.")
+    print(f"Based on your activity level ('{activity}'), your Total Daily Energy Expenditure (TDEE) is approximately {int(tdee)} kcal/day.")
 
     allergies_input = input("Any allergies? (comma-separated, or leave blank): ").strip()
     allergies = [a.strip().lower() for a in allergies_input.split(",")] if allergies_input else []
@@ -106,7 +104,7 @@ def get_user_profile():
         if input("Would you like to adopt this calorie limit? (y/N): ").strip().lower() == "y":
             calorie_goal = suggested
     else:
-        print("✅ BMI is in the normal range; no calorie restriction is suggested.")
+        print("BMI is in the normal range; no calorie restriction is suggested.")
         if input("Would you like to use your TDEE as your calorie goal? (y/N): ").strip().lower() == "y":
             calorie_goal = int(tdee)
 
@@ -212,7 +210,6 @@ def diet_constraints():
             ],
             "instructions": recipe.hasInstructions[0] if hasattr(recipe, "hasInstructions") and recipe.hasInstructions else "NA",
 
-            # Changing µg to ug for consistency 
             "EnergyKcal": get_val("hasRecipeEnergyKcal"),
             "Carbohydrates (g)": get_val("hasRecipeCarbGram"),
             "Protein (g)": get_val("hasRecipeProteinGram"),
@@ -262,7 +259,7 @@ def diet_constraints():
         return True
 
     def is_non_veg_ingredient(ingredient):
-        return True  # No restriction for non-veg
+        return True  #no restriction for non-veg
 
     def is_vegan_ingredient(ingredient):
         ingredient_classes = set(ingredient.is_a)
@@ -278,7 +275,7 @@ def diet_constraints():
         resolved = resolve_ingredient(ingredient)
         user_diet = user_constraints["diet"].lower()
 
-        if isinstance(resolved, str):  # e.g., 'mustard_seeds'
+        if isinstance(resolved, str):  
             name = resolved
 
             if user_diet == "non vegetarian":
@@ -312,7 +309,7 @@ def diet_constraints():
             (not hasattr(recipe, 'hasDiet') or not recipe.hasDiet or recipe.hasDiet[0].lower() == "na") and
             (not hasattr(recipe, 'hasIngredient') or not recipe.hasIngredient)
         ):
-            #print(f"⛔ Rejected '{recipe_name}': no diet and no ingredients provided.")
+            #print(f"Rejected '{recipe_name}': no diet and no ingredients provided.")
             rej1 += 1
             return False
 

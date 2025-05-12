@@ -3,7 +3,6 @@ import pandas as pd
 import json
 import os
 
-# Load your ontology
 owl_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'out_build_ontology_pipeline', 'nutri_mk_vri_recipe_nutrition_calculated.owl')
 onto = get_ontology("file://" + owl_file_path ).load()
 
@@ -17,7 +16,6 @@ for ing in IngredientIRI.instances():
     label = ing.hasPrefLabel[0] if hasattr(ing, "hasPrefLabel") and ing.hasPrefLabel else ing.name
     ingredients.append(label)
 
-# Remove duplicates and sort
 ingredients = sorted(set(ingredients))
 
 course_counts = {
@@ -25,7 +23,7 @@ course_counts = {
         "Lunch": 0,
         "Snacks": 0,
         "Dinner": 0,
-        "Other_or_No_Course": 0 # To count recipes with other course types or no course
+        "Other_or_No_Course": 0 
     }
 
 def extract_recipe_data(recipe):
@@ -40,19 +38,14 @@ def extract_recipe_data(recipe):
     }
 
 
-# Iterate through recipe instances
 print("Iterating through recipes...")
 for r in FoodRecipesIRI.instances():
-# Ensure it's a recipe instance and not the class itself
-# You might need to adjust this check based on your ontology structure
-    if onto.FoodRecipes in r.is_a: # A more robust check for instance of FoodRecipes class
+    if onto.FoodRecipes in r.is_a: 
 
-        # Check if the recipe has a 'hasCourse' property
         if hasattr(r, 'hasCourse') and r.hasCourse:
-            # Get the course value(s). It can be a list.
-            courses = [str(course).lower() for course in r.hasCourse] # Convert to lowercase for case-insensitive matching
+           
+            courses = [str(course).lower() for course in r.hasCourse] 
             
-            # Check for the specified course types
             found_known_course = False
             if any("breakfast" in course for course in courses):
                 course_counts["Breakfast"] += 1
@@ -68,11 +61,10 @@ for r in FoodRecipesIRI.instances():
                 found_known_course = True
             
             if not found_known_course:
-                course_counts["Other_or_No_Course"] +=1 # Count recipes with courses other than the specified ones
+                course_counts["Other_or_No_Course"] +=1 
         else:
-                course_counts["Other_or_No_Course"] += 1 # Count recipes with no course
+                course_counts["Other_or_No_Course"] += 1 
 
-# Extract all valid recipes
 all_recipes = []
 for r in FoodRecipesIRI.instances():
     if "FoodRecipes" not in [cls.name for cls in r.is_a]:
@@ -81,11 +73,9 @@ for r in FoodRecipesIRI.instances():
 
 
 base_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'out_build_ontology_pipeline')
-# Construct paths
 recipe_csv_path = os.path.join(base_dir, "extracted_recipes_from_ontology.csv")
 recipe_json_path = os.path.join(base_dir, "extracted_recipes_from_ontology.json")
 ingredient_path = os.path.join(base_dir, "extracted_ingredients_from_ontology.json")
-# Save the data
 df = pd.DataFrame(all_recipes)
 df.to_csv(recipe_csv_path, index=False)
 

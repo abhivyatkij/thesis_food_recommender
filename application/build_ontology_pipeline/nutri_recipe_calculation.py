@@ -9,11 +9,9 @@ import os
 import ast
 from owlready2 import *
 
-# Path setup
 build_ontology_pipeline_out_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'out_build_ontology_pipeline')
 onto = get_ontology(os.path.join(build_ontology_pipeline_out_dir, 'mk_vri_json_api.owl')).load()
 
-# Ingredient → Recipe nutrient map
 nutrient_map = {
     "hasEnergyKcal": "hasRecipeEnergyKcal",
     "hasCarbGram": "hasRecipeCarbGram",
@@ -55,13 +53,11 @@ nutrient_map = {
 for recipe in onto.FoodRecipes.instances():
     totals = {prop: 0.0 for prop in nutrient_map.keys()}
 
-        # Step 1: Parse hasIngredientDescription safely and build lookup dict
     try:
         desc_raw  = recipe.hasIngredientDescription[0]
         parsed    = ast.literal_eval(desc_raw)
         raw_items = parsed[0].get("items", []) if parsed else []
 
-        # Convert list of item‑dicts into a name→info dict
         ingredient_data = {
             itm.get("name", "").strip().lower(): itm
             for itm in raw_items
@@ -71,7 +67,6 @@ for recipe in onto.FoodRecipes.instances():
         ingredient_data = {}
 
 
-    # Step 2: Iterate over ingredients
     for ing in getattr(recipe, "hasIngredient", []):
         if isinstance(ing, str):
             ing = onto.search_one(iri="*" + ing.split("#")[-1])
@@ -80,9 +75,8 @@ for recipe in onto.FoodRecipes.instances():
 
         ing_name = ing.name.replace("_", " ").lower()
         ing_name_clean = ing_name.strip()
-        weight = 100.0  # fallback
+        weight = 100.0  
 
-        # Updated salt handling
         if ing_name_clean == "salt":
             salt_info = ingredient_data.get("salt", {})
             salt_weight = salt_info.get("estimated_weight_in_grams", "NA")
@@ -99,7 +93,6 @@ for recipe in onto.FoodRecipes.instances():
                         weight = 100.0
                     break
 
-        # Accumulate scaled nutrient values
         for ing_prop in nutrient_map:
             val = getattr(ing, ing_prop, None)
             if val:
@@ -109,11 +102,9 @@ for recipe in onto.FoodRecipes.instances():
                 except:
                     continue
 
-    # Step 3: Assign totals to recipe
     for ing_prop, recipe_prop in nutrient_map.items():
         if totals[ing_prop] > 0:
             setattr(recipe, recipe_prop, [round(totals[ing_prop], 2)])
 
-# Step 4: Save updated ontology
 onto.save(os.path.join(build_ontology_pipeline_out_dir, "nutri_mk_vri_recipe_nutrition_calculated.owl"), format="rdfxml")
-print("✅ Saved updated recipe nutrition totals to nutri_mk_vri_recipe_nutrition_calculated.owl file.")
+print("Saved updated recipe nutrition totals to nutri_mk_vri_recipe_nutrition_calculated.owl file.")

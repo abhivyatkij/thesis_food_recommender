@@ -381,7 +381,7 @@ if __name__ == "__main__":
             
             print_nutritional_summary(solver, x_vars_current, current_iteration_recipes, user_constraints_data, NCD_NUTRIENT_MAP, total_selected_count)
 
-            print("\nHere’s your personalized meal plan:")
+            print("\nYour personalized meal plan:")
             present_conds_for_recipe_print = {k.lower() for k, v in user_constraints_data.get("medical_conditions", {}).items() if v}
             for slot_name in ["Breakfast", "Lunch", "Snacks", "Dinner"]:
                 items = meal_plan_display.get(slot_name)
